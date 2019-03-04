@@ -3,9 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "particles.js": "^2.0.0",
     "react": "^16.8.3",
+    "react-confetti": "^2.4.1",
     "react-dom": "^16.8.3",
-    "react-scripts": "2.1.5"
+    "react-hot-loader": "^4.7.2",
+    "react-particles-js": "^2.4.2",
+    "react-scripts": "2.1.5",
+    "react-snowf": "0.0.3",
+    "react-snowstorm": "0.0.3",
+    "react-use": "^5.5.4",
+    "tachyons": "^4.11.1"
   },
   "scripts": {
     "start": "react-scripts start",

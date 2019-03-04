@@ -1,33 +1,83 @@
 .App {
   text-align: center;
+  z-index: -1;
+  display: block;
+  top: 50%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.particles-js {
+  z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dk {
+	height: 300px;
+	width: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: 50px;
+	position: absolute;
+  	top: 20%;
+  	left: 70%;
+
+}
+
+.es {
+	height: 300px;
+	width: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: 50px;
+	position: absolute;
+  	top: 55%;
+  	left: 70%;
+
+}
+
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: center;
+}
+
+@font-face {
+  font-family: mybirthday;
+  src: url(Happy Balloon St.ttf);
+}
+
+.header {
+	font-family: mybirthday;
+	font-size: 50px;
+	text-align: center;
+	color: #2EFEF7;
+}
+
+img {
+	z-index: -1;
+}
+
+label {
+	color: #2EFEF7;
+}
+
+h1 {
+	color: #2EFEF7;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #4CAF50;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
