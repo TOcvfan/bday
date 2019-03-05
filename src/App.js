@@ -5,6 +5,7 @@ import SnowStorm from 'react-snowstorm';
 import Navigation from './components/Navigation';
 import Registration from './components/Registration';
 import List from './components/List';
+import Scroll from './components/Scroll';
 
 import 'tachyons';
 import './App.css';
@@ -13,7 +14,7 @@ const initialState = {
       route: 'home',
       isSignedIn: false,
       isLoading: true,
-      user: [],
+      users: [],
       error: null
     }
 
@@ -23,16 +24,10 @@ class App extends Component {
     this.state = initialState;
   }
 
-  list = () => {
-    fetch('http://localhost:3001/list')
+  componentDidMount(){
+    fetch('https://nameless-ocean-57332.herokuapp.com/list')
       .then((response) => response.json())
-      .then(data =>// console.log(data),
-        this.setState({
-          user: data
-          
-        })
-        
-
+      .then(bday => this.setState({users: bday})
       )
       .catch(error => this.setState({ error, isLoading: false}));
   }
@@ -48,7 +43,7 @@ class App extends Component {
   
   render() {
     
-    const {route, isLoading, isSignedIn} = this.state;
+    const {route, users} = this.state;
     return (
       <div className="App">
         <Navigation onRouteChange={this.onRouteChange} />
@@ -56,14 +51,14 @@ class App extends Component {
         <img src={es} className="es" alt="Spanien"/>
           {(route === 'home') && 
               <div className="home">  
-                <Registration />
+                <Registration onRouteChange={this.onRouteChange}/>
                 <SnowStorm />
                 
               </div>}
           {(route === 'list') &&
-            <div className="list">
-              <List list={this.list}/>              
-            </div>}
+            <Scroll>
+              <List users={users} />              
+            </Scroll>}
       </div>
     );
   }

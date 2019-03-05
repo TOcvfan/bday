@@ -34,7 +34,7 @@ class Registration extends React.Component {
 	}
 
 	onSubmitSignIn = () => {
-		fetch('http://localhost:3001/birthday', {
+		fetch('https://nameless-ocean-57332.herokuapp.com/birthday', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
@@ -56,7 +56,7 @@ class Registration extends React.Component {
 	render() {
 		return (
 			<div>
-			<h1 className="header">Registration for my Birthday party on the date</h1>
+			<h1 className="header">Registration for my Birthday party on 31-08-2019</h1>
 			<article className="br3 shadow-5 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 center container">
 			<div className="w-80 w-70-m w-100-l fr">
 				<header className="pa3 bb b--light-gray relative">

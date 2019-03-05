@@ -2,6 +2,7 @@
   "name": "bdag",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://christian.hammervig.dk/birthday",
   "dependencies": {
     "particles.js": "^2.0.0",
     "react": "^16.8.3",

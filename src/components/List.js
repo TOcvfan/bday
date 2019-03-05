@@ -1,24 +1,35 @@
 import React from 'react';
 
-const list = ({name, numberAdults, numberKids, sleepOver}) =>{
+
+const List = ({ users }) => {
+	
 	return (
-		<div>
-			<table>
-			  <tr>
+		
+		 <table>
+		 	<tbody>
+			 <tr>
 			    <th>Name</th>
 			    <th>Adults</th>
 			    <th>Kids</th>
 			    <th>Sleep Over</th>
 			  </tr>
-			  <tr>
-			    <td>{name}</td>
-			    <td>{numberAdults}</td>
-			    <td>{numberKids}</td>
-			    <td>{sleepOver}</td>
-			  </tr>
+			{
+			users.map((user, i) => {
+					return (
+						<tr key={i}>		
+							<td>{users[i].name} </td>
+							<td>{users[i].numberAdults}</td>
+							<td>{users[i].numberKids}</td>
+							<td>{users[i].sleepOver}</td>
+						</tr>
+					);
+				})
+
+			}	
+			</tbody>
 			</table>
-		</div>
-		)
+		
+	);
 }
 
-export default list;
+export default List;
